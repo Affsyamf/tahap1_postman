@@ -3,8 +3,8 @@ from typing import Optional
 
 class TugasCreate(BaseModel):
     judul: str
-    nama: str
     deskripsi: Optional[str] = None
+    nama: str
     
 class Tugas(TugasCreate):
     id: int

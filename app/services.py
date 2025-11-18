@@ -8,8 +8,8 @@ def create_tugas_service(data_tugas: TugasCreate) -> Tugas:
     tugas_baru = Tugas(
         id=get_next_id(),
         judul=data_tugas.judul,
-        nama=data_tugas.nama,
-        deskripsi=data_tugas.deskripsi
+        deskripsi=data_tugas.deskripsi,
+        nama=data_tugas.nama
     )
     db.list_tugas.append(tugas_baru)
     return tugas_baru
